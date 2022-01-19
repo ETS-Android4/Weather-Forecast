@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="vk_weather_forecast">Klaus WF</string>
+    <string name="settings_action_title">Settings</string>
+    <string name="temperature_sample">30°C</string>
+    <string name="weather_status_sample">Clouds</string>
+    <string name="temperature_max_min_sample">31°C/23°C</string>
+</resources>
