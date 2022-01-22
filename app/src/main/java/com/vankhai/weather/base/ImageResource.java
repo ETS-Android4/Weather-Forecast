@@ -1,0 +1,61 @@
+package com.vankhai.weather.base;
+
+import com.vankhai.weather.R;
+
+public class ImageResource {
+    public static final int SUNNY_SMALL = R.drawable.sunny_small;
+    public static final int CLEAR_NIGHT_SMALL = R.drawable.clear_night_small;
+    public static final int CLOUDY_SMALL = R.drawable.cloudy_small;
+    public static final int PARTLY_CLOUDY_DAY_SMALL = R.drawable.partly_cloudy_day_small;
+    public static final int CLOUDY_CLEAR_AT_TIMES_DAY_SMALL = R.drawable.cloudy_clear_at_times_day_small;
+    public static final int PARTLY_CLOUDY_NIGHT_SMALL = R.drawable.partly_cloudy_night_small;
+    public static final int CLOUDY_CLEAR_AT_TIMES_NIGHT_SMALL = R.drawable.cloudy_clear_at_times_night_small;
+    public static final int FOG_SMALL = R.drawable.fog_small;
+    public static final int HUMIDITY_SMALL = R.drawable.humidity_small;
+    public static final int HEAVY_RAIN_SMALL = R.drawable.heavy_rain_small;
+    public static final int SCATTERED_SHOWERS_DAY_SMALL = R.drawable.scattered_showers_day_small;
+    public static final int SCATTERED_SHOWERS_NIGHT_SMALL = R.drawable.scatterd_shower_night_small;
+    public static final int RAIN_SMALL = R.drawable.rain_small;
+    public static final int RAIN_AND_SUN_SMALL = R.drawable.rain_and_sun_small;
+    public static final int RAIN_AND_MOON_SMALL = R.drawable.rain_and_moon_small;
+    public static final int DRIZZLE_SMALL = R.drawable.drizle_small;
+    public static final int DRIZZLE_AND_SUN_SMALL = R.drawable.drizzle_and_sun_small;
+    public static final int DRIZZLE_AND_MOON_SMALL = R.drawable.drizzle_and_moon_small;
+    public static final int SERVER_THUNDERSTORM_SMALL = R.drawable.server_thunderstorm_small;
+    public static final int SCATTERED_THUNDERSTORM_SMALL = R.drawable.thunderstorm_and_sun_small;
+    public static final int RAIN_AND_THUNDERSTORM_SMALL = R.drawable.rain_and_thunderstorm_small;
+    public static final int BLIZZARD_SMALL = R.drawable.blizzard_small;
+    public static final int SLEET_SMALL = R.drawable.sleet_small;
+    public static final int SNOW_SMALL = R.drawable.snow_small;
+    public static final int WIND_SMALL = R.drawable.wind_small;
+    public static final int BLOWING_SNOW_SMALL = R.drawable.blowing_snow_small;
+    public static final int HAIL_SMALL = R.drawable.hail_small;
+
+    public static final int SUNNY_LARGE = R.drawable.sunny_large;
+    public static final int CLEAR_NIGHT_LARGE = R.drawable.clear_night_large;
+    public static final int CLOUDY_LARGE = R.drawable.cloudy_large;
+    public static final int PARTLY_CLOUDY_DAY_LARGE = R.drawable.partly_cloud_day_large;
+    public static final int CLOUDY_CLEAR_AT_TIMES_DAY_LARGE = R.drawable.partly_cloud_day_large;
+    public static final int PARTLY_CLOUDY_NIGHT_LARGE = R.drawable.partly_cloud_night_large;
+    public static final int CLOUDY_CLEAR_AT_TIMES_NIGHT_LARGE = R.drawable.partly_cloud_night_large;
+    public static final int FOG_LARGE = R.drawable.fog_large;
+    public static final int HUMIDITY_LARGE = R.drawable.humidity_large;
+    public static final int HEAVY_RAIN_LARGE = R.drawable.heavy_rain_large;
+    public static final int SCATTERED_SHOWERS_DAY_LARGE = R.drawable.scattered_showers_day_large;
+    public static final int SCATTERED_SHOWERS_NIGHT_LARGE = R.drawable.scattered_showers_night_large;
+    public static final int RAIN_LARGE = R.drawable.rain_large;
+    public static final int RAIN_AND_SUN_LARGE = R.drawable.rain_and_sun_large;
+    public static final int RAIN_AND_MOON_LARGE = R.drawable.rain_and_moon_large;
+    public static final int DRIZZLE_LARGE = R.drawable.heavy_rain_large;
+    public static final int DRIZZLE_AND_SUN_LARGE = R.drawable.rain_and_sun_large;
+    public static final int DRIZZLE_AND_MOON_LARGE = R.drawable.rain_and_moon_large;
+    public static final int SERVER_THUNDERSTORM_LARGE = R.drawable.server_thunderstorm_large;
+    public static final int SCATTERED_THUNDERSTORM_LARGE = R.drawable.scattered_thunderstorm_large;
+    public static final int RAIN_AND_THUNDERSTORM_LARGE = R.drawable.rain_and_thunder_storm_large;
+    public static final int BLIZZARD_LARGE = R.drawable.blizzard_large;
+    public static final int SLEET_LARGE = R.drawable.blizzard_large;
+    public static final int SNOW_LARGE = R.drawable.snow_large;
+    public static final int WIND_LARGE = R.drawable.wind_large;
+    public static final int BLOWING_SNOW_LARGE = R.drawable.blowing_snow_large;
+    public static final int HAIL_LARGE = R.drawable.hail_large;
+}

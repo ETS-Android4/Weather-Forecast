@@ -3,9 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/drawable/background_gradient.xml" value="0.19814814814814816" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19814814814814816" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/drawable/settings.xml" value="0.1578125" />
         <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/font-v26/source_sans_pro.xml" value="0.234375" />
         <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/font/main.xml" value="0.234375" />
-        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/font/mochiy.xml" value="0.2153846153846154" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/font/mochiy_pop.xml" value="0.2153846153846154" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/activity_setting.xml" value="0.25" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/bottom_sheet_temperature_detail_layout.xml" value="0.14166666666666666" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/cannot_load_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/detail_row_info_layout.xml" value="0.12291666666666666" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/divider_between_list_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/forecast_day_tile.xml" value="0.1" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/forecast_hour_tile.xml" value="0.33" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/fragment_detail_weather.xml" value="0.20416666666666666" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/fragment_error_loading.xml" value="0.20416666666666666" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/fragment_loading_shimmer.xml" value="0.12135416666666667" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/location_recommend_item.xml" value="0.67" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/main_temperature_view.xml" value="0.1" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/single_line_shimmer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/temperature_radio_row.xml" value="0.1" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/temperature_switch_row.xml" value="0.25" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/top_side_search_box.xml" value="0.1046875" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/weather_detail_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/layout/weather_forecast_body_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Learning/Udemy Courses/Android/WeatherForecast/app/src/main/res/menu/main.xml" value="0.20416666666666666" />
       </map>
     </option>

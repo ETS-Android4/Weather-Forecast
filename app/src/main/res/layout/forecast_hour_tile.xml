@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/default_padding_size_2"
+    android:layout_marginHorizontal="@dimen/default_padding_size_3"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:text="@string/time_sample" />
+
+    <ImageView
+        android:id="@+id/weatherIndicateImg"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginVertical="@dimen/default_padding_size_2"
+        tools:src="@drawable/clear_night_large" />
+
+    <TextView
+        android:id="@+id/temperatureTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temperature_sample" />
+
+</LinearLayout>

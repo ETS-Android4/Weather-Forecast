@@ -1,8 +1,20 @@
 <resources>
     <string name="app_name">Weather Forecast</string>
-    <string name="vk_weather_forecast">Klaus WF</string>
-    <string name="settings_action_title">Settings</string>
+    <string name="vk_weather_forecast">Klaus</string>
+    <string name="settings_action_title">Cài đặt</string>
     <string name="temperature_sample">30°C</string>
     <string name="weather_status_sample">Clouds</string>
     <string name="temperature_max_min_sample">31°C/23°C</string>
+    <string name="date_sample">Web, 11/11/2022</string>
+    <string name="time_sample">00:00</string>
+    <string name="temperature_description">Image indicate how is the weather currently</string>
+    <string name="see_detail">Chi tiết</string>
+    <string name="location_sample">Nha Trang</string>
+    <string name="detail">Chi tiết</string>
+    <string name="location_title">Địa điểm</string>
+    <string name="temperature_unit">Đơn vị nhiệt độ</string>
+    <string name="get_location_by_latlng">Vị trí hiện tại</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="cancel">Hủy</string>
 </resources>

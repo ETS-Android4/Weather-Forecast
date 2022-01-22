@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="temperator_tv_size">64sp</dimen>
+    <dimen name="temperature_tv_size">64sp</dimen>
+    <dimen name="topside_tv_size">26sp</dimen>
+    <dimen name="default_padding_size">16dp</dimen>
+    <dimen name="default_padding_size_2">8dp</dimen>
+    <dimen name="default_padding_size_3">24dp</dimen>
+    <dimen name="default_image_margin_size">8dp</dimen>
+    <dimen name="single_line_shimmer_size">18dp</dimen>
 </resources>

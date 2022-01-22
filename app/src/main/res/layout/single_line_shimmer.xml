@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/default_padding_size">
+
+
+    <View
+        android:id="@+id/timeTv"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/single_line_shimmer_size"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+    <View
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginHorizontal="@dimen/default_padding_size"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/single_line_shimmer_size"
+            android:background="@color/white"
+            android:layout_marginBottom="@dimen/default_padding_size_2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/single_line_shimmer_size"
+            android:background="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>
