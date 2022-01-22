@@ -30,6 +30,8 @@ public class ImageResource {
     public static final int WIND_SMALL = R.drawable.wind_small;
     public static final int BLOWING_SNOW_SMALL = R.drawable.blowing_snow_small;
     public static final int HAIL_SMALL = R.drawable.hail_small;
+    public static final int VISIBILITY_SMALL = R.drawable.visibility_small;
+    public static final int TEMPERATURE_SMALL = R.drawable.temperature_small;
 
     public static final int SUNNY_LARGE = R.drawable.sunny_large;
     public static final int CLEAR_NIGHT_LARGE = R.drawable.clear_night_large;

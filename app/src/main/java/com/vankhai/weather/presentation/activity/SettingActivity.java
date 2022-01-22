@@ -2,25 +2,27 @@ package com.vankhai.weather.presentation.activity;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
-import android.location.Location;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 
 import com.vankhai.weather.R;
 import com.vankhai.weather.adapter.RecommendArrayAdapter;
-import com.vankhai.weather.base.WeatherLoadingState;
+import com.vankhai.weather.base.Constants;
+import com.vankhai.weather.base.WeatherForecastApplication;
 import com.vankhai.weather.databinding.ActivitySettingBinding;
-import com.vankhai.weather.databinding.LocationRecommendItemBinding;
 import com.vankhai.weather.model.LocationRecommend;
 import com.vankhai.weather.presentation.viewmodel.SettingViewModel;
 
@@ -51,11 +53,11 @@ public class SettingActivity extends AppCompatActivity {
         binding.editLocationInputBtn.setOnClickListener(view -> onEditLocationInputBtnClick());
         binding.cancelInputLocationBtn.setOnClickListener(view -> onCancelEditLocationInputBtnClick());
 
-        binding.celsiusRadioRow.titleTv.setText(R.string.celsius);
-        binding.fahrenheitRadioRow.titleTv.setText(R.string.fahrenheit);
-
-        binding.celsiusRadioRow.radioBtn.setOnClickListener(view -> onCelsiusRadioBtnClick());
-        binding.fahrenheitRadioRow.radioBtn.setOnClickListener(view -> onFahrenheitRadioBtnClick());
+//        binding.celsiusRadioRow.titleTv.setText(R.string.celsius);
+//        binding.fahrenheitRadioRow.titleTv.setText(R.string.fahrenheit);
+//
+//        binding.celsiusRadioRow.radioBtn.setOnClickListener(view -> onCelsiusRadioBtnClick());
+//        binding.fahrenheitRadioRow.radioBtn.setOnClickListener(view -> onFahrenheitRadioBtnClick());
 
         /// Observe location name change
         final Observer<String> locationNameObserver = new Observer<String>() {
@@ -76,13 +78,16 @@ public class SettingActivity extends AppCompatActivity {
             public void onChanged(Boolean isEdit) {
                 if (isEdit) {
                     binding.locationValueTv.setVisibility(View.GONE);
+                    binding.countryValueTv.setVisibility(View.GONE);
                     binding.getLocationByLatLongBtn.setVisibility(View.GONE);
                     binding.editLocationInputBtn.setVisibility(View.GONE);
+                    binding.locationTitleTv.setVisibility(View.GONE);
+                    binding.countryTitleTv.setVisibility(View.GONE);
 
                     binding.cancelInputLocationBtn.setVisibility(View.VISIBLE);
                     AutoCompleteTextView acTv = binding.inputLocationAutoCompleteTv;
                     acTv.setVisibility(View.VISIBLE);
-                    acTv.setText(viewModel.getCurrentLocation());
+                    acTv.setText(Constants.EMPTY);
                     acTv.setThreshold(1);
                     acTv.addTextChangedListener(new TextWatcher() {
                         @Override
@@ -115,6 +120,10 @@ public class SettingActivity extends AppCompatActivity {
                     binding.getLocationByLatLongBtn.setVisibility(View.VISIBLE);
                     binding.locationValueTv.setVisibility(View.VISIBLE);
                     binding.locationValueTv.setText(viewModel.getCurrentLocation());
+                    binding.countryValueTv.setVisibility(View.VISIBLE);
+                    binding.countryValueTv.setText(viewModel.getCurrentCountryName());
+                    binding.locationTitleTv.setVisibility(View.VISIBLE);
+                    binding.countryTitleTv.setVisibility(View.VISIBLE);
                 }
             }
         };
@@ -126,35 +135,47 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onChanged(List<LocationRecommend> recommends) {
                 if (View.VISIBLE == binding.inputLocationAutoCompleteTv.getVisibility()) {
+                    Timber.i("Recommend count: " + recommends.size() + "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
                     RecommendArrayAdapter locationRecommendArrayAdapter = new RecommendArrayAdapter(SettingActivity.this, recommends);
                     binding.inputLocationAutoCompleteTv.setAdapter(locationRecommendArrayAdapter);
+                    binding.inputLocationAutoCompleteTv.showDropDown();
                 }
             }
         };
         viewModel.getLocationRecommends().observe(this, recommendLocationObserver);
     }
 
-    void onGetLocationByLatLongBtnClick() {
-        ///TODO: Handle this later
+    private final int LOCATION_PERMISSION_REQUEST_CODE = 111;
+
+    private void onGetLocationByLatLongBtnClick() {
+        if (ContextCompat.checkSelfPermission(
+                WeatherForecastApplication.getContext(), Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(SettingActivity.this, new String[]{
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+            }, LOCATION_PERMISSION_REQUEST_CODE);
+        } else {
+            viewModel.triggerChooseLocationByCurrentLatLng();
+        }
     }
 
-    void onEditLocationInputBtnClick() {
+    private void onEditLocationInputBtnClick() {
         viewModel.triggerEditLocationByInput();
     }
 
-    void onCancelEditLocationInputBtnClick() {
+    private void onCancelEditLocationInputBtnClick() {
         viewModel.triggerCancelEditLocationByInput();
     }
 
-    void onCelsiusRadioBtnClick() {
+    private void onCelsiusRadioBtnClick() {
         ///TODO: Handle this later
     }
 
-    void onFahrenheitRadioBtnClick() {
+    private void onFahrenheitRadioBtnClick() {
         ///TODO: Handle this later
     }
 
-    void onRecommendItemClick(LocationRecommend selected) {
+    private void onRecommendItemClick(LocationRecommend selected) {
         ///TODO: Handle popup maybe
         viewModel.triggerConfirmNewLocationName(selected);
     }

@@ -58,7 +58,6 @@ public class RepositoryImpl extends Repository {
     @Override
     public void onLocationRecommendComplete(List<LocationRecommend> locationNames) {
         listeners.forEach(iRepositoryEventListener -> iRepositoryEventListener.onLocationNameAutoCompleteReceive(locationNames));
-        Timber.i("Call this hong??????????????????????????????????????? RepoImpl");
     }
 
     @Override
@@ -74,6 +73,16 @@ public class RepositoryImpl extends Repository {
     @Override
     public String getLocationName() {
         return locationPreference.getLocationName();
+    }
+
+    @Override
+    public String getCountryName() {
+        return locationPreference.getCountryName();
+    }
+
+    @Override
+    public String getLatLngString() {
+        return locationPreference.getCurrentLatLngString();
     }
 
     @Override

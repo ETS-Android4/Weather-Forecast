@@ -9,6 +9,8 @@ abstract public class Repository implements IApiListener {
     public abstract WeatherData getWeatherForecast();
     public abstract void registerIRepositoryEventListener(IRepositoryEventListener listener);
     public abstract String getLocationName();
+    public abstract String getCountryName();
+    public abstract String getLatLngString();
     public abstract void onTypeQueryLocation(String pattern);
     public abstract void onUserChangeLocationName(LocationRecommend location);
 }

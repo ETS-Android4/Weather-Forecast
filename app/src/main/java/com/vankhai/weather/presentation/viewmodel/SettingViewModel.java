@@ -39,8 +39,17 @@ public class SettingViewModel extends ViewModel implements IRepositoryEventListe
         return repository.getLocationName();
     }
 
+    public  String getCurrentCountryName() {
+        return repository.getCountryName();
+    }
+
     public void onTypeQueryLocation(String pattern) {
         repository.onTypeQueryLocation(pattern);
+    }
+
+    public void triggerChooseLocationByCurrentLatLng() {
+        isEditLocationByInput.setValue(true);
+        repository.onTypeQueryLocation(repository.getLatLngString());
     }
 
     public void triggerEditLocationByInput() {

@@ -31,7 +31,6 @@ public class RecommendArrayAdapter extends ArrayAdapter<LocationRecommend> {
     }
 
     private List<LocationRecommend> recommends;
-    private List<LocationRecommend> filteredLocations;
 
     @NonNull
     @Override
@@ -41,7 +40,6 @@ public class RecommendArrayAdapter extends ArrayAdapter<LocationRecommend> {
 
         binding.locationNameTv.setText(recommends.get(position).getName());
         binding.countryTv.setText(recommends.get(position).getCountry());
-        Timber.i("Toi dang duoc gọi ne ong vua long chua, nhung t lai eo duoc show ra, eo hieu tai sao");
         return binding.getRoot();
     }
 
@@ -60,22 +58,16 @@ public class RecommendArrayAdapter extends ArrayAdapter<LocationRecommend> {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
             FilterResults results = new FilterResults();
-            filteredLocations = new LinkedList<>();
-
-            filteredLocations.addAll(recommends);
-
-            results.values = filteredLocations;
-
+            results.values = recommends;
             return results;
         }
 
         @Override
         protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
             clear();
-            if (((List) filterResults.values).size() != 0) {
-                addAll((List) filterResults.values);
-                notifyDataSetChanged();
-            }
+            addAll(recommends);
+            Timber.i("Tui co duoc goi khong ne dau phong .....................................");
+            notifyDataSetChanged();
         }
     };
 }

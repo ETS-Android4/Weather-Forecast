@@ -65,13 +65,13 @@ public class DetailWeatherFragment extends Fragment {
         binding.detailCurrentWeather.cloudRow.infoImg.setImageResource(ImageResource.CLOUDY_SMALL);
 
         binding.detailCurrentWeather.feelLikeRow.infoTv.setText(Constants.FEEL_LIKE + ": " + Utils.getNiceTemperatureCelsius(currentWeather.getFeelLikeC()));
-        binding.detailCurrentWeather.feelLikeRow.infoImg.setImageResource(ImageResource.CLOUDY_SMALL);
+        binding.detailCurrentWeather.feelLikeRow.infoImg.setImageResource(ImageResource.TEMPERATURE_SMALL);
 
         binding.detailCurrentWeather.humidityRow.infoTv.setText(Constants.HUMIDITY + ": " + currentWeather.getHumidity() + "%");
         binding.detailCurrentWeather.humidityRow.infoImg.setImageResource(ImageResource.HUMIDITY_SMALL);
 
         binding.detailCurrentWeather.visibilityRow.infoTv.setText(Constants.VISIBILITY + ": " + currentWeather.getVisibilityKm() + "km");
-        binding.detailCurrentWeather.visibilityRow.infoImg.setImageResource(ImageResource.SUNNY_SMALL);
+        binding.detailCurrentWeather.visibilityRow.infoImg.setImageResource(ImageResource.VISIBILITY_SMALL);
 
         binding.detailCurrentWeather.windSpeedRow.infoTv.setText(Constants.WIND_SPEED + ": " + currentWeather.getWindSpeed() + "km");
         binding.detailCurrentWeather.windSpeedRow.infoImg.setImageResource(ImageResource.WIND_SMALL);

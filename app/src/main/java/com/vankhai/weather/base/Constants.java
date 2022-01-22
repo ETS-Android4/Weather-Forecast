@@ -1,11 +1,15 @@
 package com.vankhai.weather.base;
 
+import com.vankhai.weather.model.LocationRecommend;
+
 public class Constants {
     public static final String API_KEY = "6f48c614fe924086aad103057221901";
     public static final String API_BASE = "http://api.weatherapi.com/v1";
     public static final String LANG_PREFERENCES = "vi";
     public static final String DEFAULT_LOCATION = "Nha Trang";
     public static final String DEFAULT_COUNTRY = "Việt Nam";
+    public static final LocationRecommend DEFAULT_LOCATION_RECOMMEND = new LocationRecommend(DEFAULT_LOCATION, DEFAULT_COUNTRY);
+    public static final String EMPTY = "";
     public static final int TOTAL_DAY_FORECAST = 3;
     public static final String TODAY = "Hôm nay";
     public static final String TOMORROW = "Ngày mai";
