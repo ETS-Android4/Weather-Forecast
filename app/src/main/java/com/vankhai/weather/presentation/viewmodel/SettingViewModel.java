@@ -49,7 +49,7 @@ public class SettingViewModel extends ViewModel implements IRepositoryEventListe
 
     public void triggerChooseLocationByCurrentLatLng() {
         isEditLocationByInput.setValue(true);
-        repository.onTypeQueryLocation(repository.getLatLngString());
+        repository.getLatLngStringDelegate();
     }
 
     public void triggerEditLocationByInput() {
@@ -94,5 +94,10 @@ public class SettingViewModel extends ViewModel implements IRepositoryEventListe
 
     public void registerRepositoryEventListener() {
         repository.registerIRepositoryEventListener(this);
+    }
+
+    @Override
+    public void onLocationStringResultReady(String result) {
+        repository.onTypeQueryLocation(result);
     }
 }

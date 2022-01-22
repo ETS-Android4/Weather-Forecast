@@ -62,4 +62,9 @@ public class MainViewModel extends ViewModel implements IRepositoryEventListener
     public void onLocationNameAutoCompleteError() {
         /// Do nothing
     }
+
+    @Override
+    public void onLocationStringResultReady(String result) {
+
+    }
 }

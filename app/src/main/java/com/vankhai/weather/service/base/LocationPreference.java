@@ -8,5 +8,5 @@ public abstract class LocationPreference {
     public abstract String getLocationName();
     public abstract String getCountryName();
     public abstract void updateLocation(LocationRecommend locationRecommend);
-    public abstract String getCurrentLatLngString();
+    public abstract void getCurrentLatLngString();
 }

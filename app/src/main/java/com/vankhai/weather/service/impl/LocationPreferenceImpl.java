@@ -1,7 +1,11 @@
 package com.vankhai.weather.service.impl;
 
+import android.annotation.SuppressLint;
+
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.vankhai.weather.base.Constants;
+import com.vankhai.weather.base.WeatherForecastApplication;
 import com.vankhai.weather.model.LocationRecommend;
 import com.vankhai.weather.service.base.LocationPreference;
 
@@ -10,6 +14,7 @@ public class LocationPreferenceImpl extends LocationPreference {
     private FusedLocationProviderClient fusedLocationClient;
 
     LocationPreferenceImpl() {
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(WeatherForecastApplication.getContext());
     }
 
     @Override
@@ -38,8 +43,16 @@ public class LocationPreferenceImpl extends LocationPreference {
         currentLocation = locationRecommend;
     }
 
+    @SuppressLint("MissingPermission")
     @Override
-    public String getCurrentLatLngString() {
-        return "12.495070079883831,109.1325853714918";
+    public void getCurrentLatLngString() {
+        fusedLocationClient.getLastLocation().addOnSuccessListener(location -> {
+            if (location != null) {
+                RepositoryImpl.instance.onGetLocationResultSuccess(location.getLatitude() + "," + location.getLongitude());
+            } else RepositoryImpl.instance.onGetLocationResultSuccess(Constants.DEFAULT_LOCATION);
+        });
+
     }
+
+
 }

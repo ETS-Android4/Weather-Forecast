@@ -10,4 +10,9 @@ public interface IRepositoryEventListener {
     void onLocationNameChange();
     void onLocationNameAutoCompleteReceive(List<LocationRecommend> locationNames);
     void onLocationNameAutoCompleteError();
+
+    /*
+     * Use this function to get LocationRecommend data and show up on AutoCompleteTextView
+     */
+    void onLocationStringResultReady(String result);
 }

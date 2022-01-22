@@ -81,8 +81,8 @@ public class RepositoryImpl extends Repository {
     }
 
     @Override
-    public String getLatLngString() {
-        return locationPreference.getCurrentLatLngString();
+    public void getLatLngStringDelegate() {
+        locationPreference.getCurrentLatLngString();
     }
 
     @Override
@@ -101,5 +101,11 @@ public class RepositoryImpl extends Repository {
     public void onUserChangeLocationName(LocationRecommend location) {
         locationPreference.updateLocation(location);
         listeners.forEach(IRepositoryEventListener::onLocationNameChange);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void onGetLocationResultSuccess(String result) {
+        listeners.forEach(iRepositoryEventListener -> iRepositoryEventListener.onLocationStringResultReady(result));
     }
 }
