@@ -34,7 +34,7 @@ This project use:
 
 ### Demo
 
-<img src="https://github.com/DucThu-Dev/Weather-Forecast/blob/master/photos/weather_forecast_demo.jpg?raw=true" height="480px"> <img src="https://github.com/DucThu-Dev/Weather-Forecast/blob/master/photos/weather_forecast_overview.gif?raw=true" height="480px"> <img src="https://github.com/DucThu-Dev/Weather-Forecast/blob/master/photos/weather_forecast_change_location.gif?raw=true" height="480px">
+<img src="photos/weather_forecast_demo.jpg" height="480px"> <img src="photos/weather_forecast_overview.gif" height="480px"> <img src="photos/weather_forecast_change_location.gif" height="480px">
 
 <!-- LICENSE -->
 
