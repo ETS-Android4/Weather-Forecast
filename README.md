@@ -10,12 +10,15 @@
 </div>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 This project is inspired and cloned base on some other weather forecast application.
 
 Key features:
-* Current weather information, like temperature, status, humidity, feels like weather, visibility, cloudy,...
+
+* Current weather information, like temperature, status, humidity, feels like weather, visibility,
+  cloudy,...
 * See forecast weather for the next 3 day, with status indicate hourly.
 * Flexibly change location by searching, or use current position to get location.
 
@@ -26,10 +29,19 @@ This project use:
 * [Android Native](https://developer.android.com/) for application.
 * [WeatherAPI](https://www.weatherapi.com/) for weather forecast information and location pickup.
 * Graphic resources:
-    https://www.figma.com/community/file/1059229179375580154
-    https://www.figma.com/community/file/972934576657989859
+  https://www.figma.com/community/file/1059229179375580154
+  https://www.figma.com/community/file/972934576657989859
+
+### Demo
+
+![alt Demo Launch screen](https://github.com/DucThu-Dev/Weather-Forecast/blob/master/photos/weather_forecast_demo.jpg?raw=true)
+
+![alt Demo Launch screen](https://github.com/DucThu-Dev/Weather-Forecast/blob/master/photos/weather_forecast_overview.gif?raw=true)
+
+![alt Demo Launch screen](https://github.com/DucThu-Dev/Weather-Forecast/blob/master/photos/weather_forecast_change_location.gif?raw=true)
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License.
