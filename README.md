@@ -23,7 +23,7 @@ Key features:
 
 This project use:
 
-* [Android Native](https://nodejs.org/en/) for server side.
+* [Android Native](https://developer.android.com/) for application.
 * [WeatherAPI](https://www.weatherapi.com/) for weather forecast information and location pickup.
 * Graphic resources:
     https://www.figma.com/community/file/1059229179375580154
